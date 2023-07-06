@@ -67,7 +67,7 @@ const actualizarPizza =(req,res)=>{
     const id=req.params.id;
     console.log(id)
     console.log(req.body)
-    //pedirle a la db que me traiga la info de esa peli
+    
     dbConection.query(`UPDATE  pizzas SET  ? WHERE id=?`,[req.body,id],(error,data)=>{
         if(error){
             res.send(error)
